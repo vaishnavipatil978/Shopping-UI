@@ -1,7 +1,7 @@
 
 if(localStorage.getItem("currentUser") == null){
     alert("Please login!");
-    history.back();
+    window.location.href = "/login.html"
 }
 
 var currentUser;

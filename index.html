@@ -16,7 +16,7 @@
         <h1><a href="/index.html"> MeShop.</a></h1>
 
         <div class="links">
-          <a href="/">Home</a>
+          <a href="/index.html">Home</a>
           <a onclick="checkLogin()">Login</a>
           <a onclick="checkSignup()">Signup</a>
           <a onclick="checkCart()">My Cart</a>
@@ -39,11 +39,11 @@
                 </div> -->
 
                 <div>
-                  <a href="/login/index.html" id="black_btn" >Login</a>
-                  <a href="/signup/index.html" id="white_btn">Signup</a>
+                  <a href="/login.html" id="black_btn" >Login</a>
+                  <a href="/signup.html" id="white_btn">Signup</a>
                 </div>
 
-                <a href="/shop/index.html"><img src="landingPagePic.png" alt="Landing Page Image" id="homeImg"></a>
+                <a href="/shop.html"><img src="landingPagePic.png" alt="Landing Page Image" id="homeImg"></a>
 
 
             </div>
@@ -55,21 +55,21 @@
             function checkCart() {
                 if(localStorage.getItem("currentUser") == null){
                   alert("Please login");
-                  window.location.href = "/login/index.html"
+                  window.location.href = "/login.html"
                   return;
                 }
 
-                window.location.href = "/cart/index.html"
+                window.location.href = "/cart.html"
             }
 
             function checkProfile(){
               if(localStorage.getItem("currentUser") == null){
                   alert("Please login");
-                  window.location.href = "/login/index.html"
+                  window.location.href = "/login.html"
                   return;
                 }
 
-                window.location.href = "/profile/index.html"
+                window.location.href = "/login.html"
             }
 
             function checkLogin(){
@@ -78,7 +78,7 @@
                   return;
               }
 
-              window.location.href = "/login/index.html";
+              window.location.href = "/login.html";
             }
 
             function checkSignup(){
@@ -87,7 +87,7 @@
                   return;
               }
 
-              window.location.href = "/signup/index.html"
+              window.location.href = "/signup.html"
             }
         </script>
     </main>

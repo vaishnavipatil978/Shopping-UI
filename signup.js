@@ -42,7 +42,7 @@ function signupData() {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    window.location.href = "/login/index.html";
+    window.location.href = "/login.html";
 
 }
 

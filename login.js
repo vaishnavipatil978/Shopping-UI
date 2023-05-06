@@ -27,7 +27,7 @@ async function loginUser(){
 
     if (userIndex==-1){ 
       alert("User does not exists ! Please sign up...");
-      window.location.href="/signup/index.html";
+      window.location.href="/signup.html";
       return;
     }
 
@@ -49,7 +49,7 @@ async function loginUser(){
 
     await fetchShopItems();
     
-    window.location.href = "/shop/index.html";
+    window.location.href = "/shop.html";
 }
 
 function generateString() {
