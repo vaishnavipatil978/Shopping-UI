@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeShop.</title>
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="stylesheet" href="shop1.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="/">MeShop.</a>
+      </div>
+      <div class="nav-items">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        <a href="/cart">My Cart</a>
+      </div>
+    </nav>
+
+    <main>
+      <aside>
+        <section>
+          <title>Colors</title>
+          <ul>
+            <li>
+              <input value="red" type="checkbox" name="color" class="color_filter" onchange="filterByColor(this)"/>
+              <label for="red">Red</label>
+            </li>
+            <li>
+              <input value="blue" type="checkbox" name="color" class="color_filter" onchange="filterByColor(this)"/>
+              <label for="blue">Blue</label>
+            </li>
+            <li>
+              <input value="green" type="checkbox" name="color" class="color_filter" onchange="filterByColor(this)"/>
+              <label for="green">Green</label>
+            </li>
+            <li>
+              <input value="black" type="checkbox" name="color" class="color_filter" onchange="filterByColor(this)"/>
+              <label for="black">Black</label>
+            </li>
+            <li>
+              <input value="white" type="checkbox" name="color" class="color_filter" onchange="filterByColor(this)"/>
+              <label for="white">White</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <title>Sizes</title>
+          <ul>
+            <li>
+              <input value="S" type="checkbox" name="color" onchange="filterBySize(this)"/>
+              <label for="s">S</label>
+            </li>
+            <li>
+              <input value="M" type="checkbox" name="color" onchange="filterBySize(this)" />
+              <label for="m">M</label>
+            </li>
+            <li>
+              <input value="L" type="checkbox" name="color" onchange="filterBySize(this)"/>
+              <label for="l">L</label>
+            </li>
+            <li>
+              <input value="XL" type="checkbox" name="color" onchange="filterBySize(this)"/>
+              <label for="xl">XL</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <title>Rating</title>
+          <input
+            type="range"
+            id="range"
+            min="0"
+            max="5"
+            value="0"
+            list="values"
+            onchange="ratingChanged()"
+          />
+          <datalist id="values">
+            <option value="0" label="0"></option>
+            <option value="1" label="."></option>
+            <option value="2" label="."></option>
+            <option value="3" label="."></option>
+            <option value="4" label="."></option>
+            <option value="5" label="5"></option>
+          </datalist>
+        </section>
+        <section>
+          <title>Price Range</title>
+          <ul>
+            <li>
+              <input id="0-25" type="checkbox" name="prange" onchange="filterByPrice(this,'a')"/>
+              <label for="0-25">$0 to $25</label>
+            </li>
+            <li>
+              <input id="25-50" type="checkbox" name="prange" onchange="filterByPrice(this,'b')"/>
+              <label for="25-50">$25 to $50</label>
+            </li>
+            <li>
+              <input id="50-100" type="checkbox" name="prange" onchange="filterByPrice(this,'c')"/>
+              <label for="50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input id="100on" type="checkbox" name="prange" onchange="filterByPrice(this,'d')"/>
+              <label for="100on">$100 onwards</label>
+            </li>
+          </ul>
+        </section>
+      </aside>
+      <main-content>
+        <input type="text" placeholder="Search" id="search" onkeyup="filterItems()"/>
+
+        <div class="filters">
+          <div class="filter active" id="all" onclick="category_filter('all')">All</div>
+          <div class="filter" id="men" onclick="category_filter('men')">Mens</div>
+          <div class="filter" id="wom" onclick="category_filter('wom')">Womens</div>
+          <div class="filter" id="jew" onclick="category_filter('jew')">Jewellery</div>
+          <div class="filter" id="ele" onclick="category_filter('ele')">Electronics</div>
+        </div>
+
+        <div id="filteredProducts" >
+
+        </div>
+
+        <div id="loadedProducts">
+          <section>
+            <title>Men's Clothing</title>
+            <div class="items" id="men_clothing"></div>
+          </section>
+
+          <section>
+            <title>Women's Clothing</title>
+            <div class="items" id="women_clothing"></div>
+          </section>
+
+          <section>
+            <title>Jewellery</title>
+            <div class="items" id="jewelery"></div>
+          </section>
+
+          <section>
+            <title>Electronics</title>
+            <div class="items" id="electronics"></div>
+          </section>
+        </div>
+      </main-content>
+    </main>
+
+    <script src="shop.js"></script>
+  </body>
+</html>

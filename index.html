@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <header>
+        <h1><a href="/index.html"> MeShop.</a></h1>
+
+        <div class="links">
+          <a href="/">Home</a>
+          <a onclick="checkLogin()">Login</a>
+          <a onclick="checkSignup()">Signup</a>
+          <a onclick="checkCart()">My Cart</a>
+          <a onclick="checkProfile()">Profile</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="infoDiv">
+
+            <h1>MeShop.</h1>
+
+            <p>Your First Shop built on HTML,CSS AND JavaScript</p>
+            
+            <div class="btnAndimg">
+<!-- 
+                <div>
+                    <Button class="blackbtn" onclick="/login/index.html">Login</Button>
+                    <Button class="whitebtn" onclick="/signup/index.html">Signup</Button>           
+                </div> -->
+
+                <div>
+                  <a href="/login/index.html" id="black_btn" >Login</a>
+                  <a href="/signup/index.html" id="white_btn">Signup</a>
+                </div>
+
+                <a href="/shop/index.html"><img src="landingPagePic.png" alt="Landing Page Image" id="homeImg"></a>
+
+
+            </div>
+
+        </div>
+
+
+        <script>
+            function checkCart() {
+                if(localStorage.getItem("currentUser") == null){
+                  alert("Please login");
+                  window.location.href = "/login/index.html"
+                  return;
+                }
+
+                window.location.href = "/cart/index.html"
+            }
+
+            function checkProfile(){
+              if(localStorage.getItem("currentUser") == null){
+                  alert("Please login");
+                  window.location.href = "/login/index.html"
+                  return;
+                }
+
+                window.location.href = "/profile/index.html"
+            }
+
+            function checkLogin(){
+              if(localStorage.getItem("currentUser") != null){
+                  alert("Please logout first");
+                  return;
+              }
+
+              window.location.href = "/login/index.html";
+            }
+
+            function checkSignup(){
+              if(localStorage.getItem("currentUser") != null){
+                  alert("Please logout first");
+                  return;
+              }
+
+              window.location.href = "/signup/index.html"
+            }
+        </script>
+    </main>
+  </body>
+</html>

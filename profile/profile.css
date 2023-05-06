@@ -1,0 +1,85 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+header{
+    background-color:black;
+    color: white;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+    font-weight: 200;
+
+    padding: 25px 30px;
+
+}
+
+header h1{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+}
+
+main{
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.profile_container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h1{
+    align-self: center;
+}
+
+.form_container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.input_container{
+    margin:10px 0;
+    padding:10px;
+}
+
+.black_btn{
+    background-color: black;
+    width: autp;
+    color: white;
+    width:200px;
+    padding: 10px 0;
+    border:1px solid black;
+    margin: 10px 0px;
+}
+
+.msgDiv{
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+input[type=button]:hover, button:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(116, 171, 253);
+    color: black;
+    font-weight: 700;
+    border-color:rgb(116, 171, 253) ;
+}
+
+@media (max-width:750px) {
+    #password_container{
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css" />
+
+    <title>Sign Up</title>
+  </head>
+  <body onload="fillDefault()">
+    <header>
+      <h1><a href="/cart/index.html"> Shopping Cart </a></h1>
+    </header>
+
+    <main >
+        <div class="profile_container">
+            <h1>My Profile</h1>
+
+            <div>
+                <form class="form_container">
+                    <input type="text" class="input_container" placeholder="First Name" id="firstName" onkeyup="hideMsg(msgDiv1)" value="">
+                    <input type="text" class="input_container" placeholder="Last Name" id="lastName" onkeyup="hideMsg(msgDiv1)" value="">
+
+                    <div id="msgDiv1"  class="msgDiv"></div>
+
+                    <input type="button" class="black_btn" value="Save Info" onclick="saveInfo()">
+                </form>
+            </div>
+        </div>
+
+        <div class="profile_container" id="password_container">
+            <h1>Edit Password</h1>
+
+            <div>
+                <form class="form_container">
+                    <input type="password" class="input_container" placeholder="Old Password" onkeyup="hideMsg(msgDiv2)" id="oldPassword">
+                    <input type="password" class="input_container" placeholder="New Password" onkeyup="hideMsg(msgDiv2)" id="newPassword">
+                    <input type="password" class="input_container" placeholder="Confirm New Password" onkeyup="hideMsg(msgDiv2)" id="confirmNewPassword">
+
+                    <div id="msgDiv2" class="msgDiv"></div>
+
+                    <input type="button" value="Change Password" class="black_btn" onclick="changePassword()">
+                </form>
+            </div>
+        </div>
+
+        <button class="black_btn" onclick="logoutUser()">Logout</button>
+    </main>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

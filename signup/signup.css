@@ -1,0 +1,97 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+header{
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+    font-weight: 200;
+
+    padding: 25px 30px;
+
+}
+
+header h1{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.links{
+    width: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+
+main {
+    margin: 20px 30px 20px 30px;
+}
+
+input{
+    width: 98%;
+    font-weight: 500;
+    color: black;
+}
+
+main h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+main form{
+    margin : 20px 0px;
+}
+
+.signupInputs{
+    margin: 10px 0px;
+    padding: 10px 10px;
+}
+
+
+input:focus{
+    border: 1px solid grey;
+    background-color:#ede6e6
+}
+
+#submitBtn{
+    width: auto;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+
+    padding : 10px 40px;
+    margin: 10px 0px;
+}
+
+@media(max-width:600px){
+    header{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .links a{
+        font-size: 15px;
+    }
+
+    .links{
+        width: 100%;
+    }
+}
