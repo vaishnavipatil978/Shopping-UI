@@ -34,7 +34,7 @@ function signupData() {
     let userExists = users.find((user) => user.email === email);
     if (userExists) {
       alert("User already exists");
-      window.location.href = "/login/index.html";
+      window.location.href = "login.html";
       return;
     }
 
@@ -42,7 +42,7 @@ function signupData() {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    window.location.href = "/login.html";
+    window.location.href = "login.html";
 
 }
 

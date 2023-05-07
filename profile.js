@@ -1,7 +1,7 @@
 
 if(localStorage.getItem("currentUser") == null){
     alert("Please login!");
-    window.location.href = "/login.html"
+    window.location.href = "login.html"
 }
 
 var currentUser;
@@ -108,5 +108,5 @@ function changePassword(){
 function logoutUser(){
     localStorage.removeItem("currentUser");
     localStorage.removeItem("products");
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
 }

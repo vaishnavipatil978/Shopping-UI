@@ -1,6 +1,6 @@
 if(localStorage.getItem("currentUser") == null){
     alert("Please login!");
-    window.location.href = "/login.html"
+    window.location.href = "login.html"
 }
 
 var ItemsToRender = [];
@@ -21,7 +21,7 @@ function loadItems(){
         document.getElementById("main_card").style.display="none";
        
         document.getElementById("no_item_card").innerHTML=`No Item Added To Cart
-        <div><a href="/shop.html">Shop Now</a></div>`;
+        <div><a href="shop.html">Shop Now</a></div>`;
     
         return;
     }
@@ -116,5 +116,5 @@ function checkOut(){
      localStorage.setItem("products",JSON.stringify(products));
 
      alert("Order Placed Successfully!");
-     window.location.href = "/shop.html";
+     window.location.href = "shop.html";
 }
